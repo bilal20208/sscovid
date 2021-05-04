@@ -1,4 +1,4 @@
- 
+
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -33,7 +33,34 @@
    </head>
    <body>
       <!--header section start -->
-      @include('baner')
+      <div class="container-fluid">
+         <div class="main">
+            <div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>
+            <div class="menu_text">
+               <ul>
+                  <div class="togle_">
+                     <div class="menu_main">
+                       
+                     </div>
+                  </div>
+                  <div id="myNav" class="overlay">
+                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                     <div class="overlay-content">
+                        <a href="{{ route('home') }}">Home</a>
+                        <a href="{{ route('protect') }}">Protect</a>
+                        <a href="{{ route('about') }}">About</a>
+                        <a href="{{ route('doctors') }}">Doctors</a>
+                        <a href="{{ route('news') }}">News</a>
+                     </div>
+                  </div>
+                  <span class="navbar-toggler-icon"></span>
+                  <span onclick="openNav()"><img src="images/toogle-icon.png" class="toggle_menu"></span>
+                  <span onclick="openNav()"><img src="images/toogle-icon1.png" class="toggle_menu_1"></span>
+               </ul>
+            </div>
+         </div>
+      </div>
+<!-- banner section start -->
       <!-- header section end -->
       <!-- about section start -->
       <div class="about_section layout_padding">

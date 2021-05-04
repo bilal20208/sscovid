@@ -57,7 +57,8 @@ class test extends Controller
 
     public function getimg(Request $request,$img)
     {
-        $ip=$request->ip();
+        /* $ip=$request->ip(); */
+        $ip=''.$this->getVistorIp();
         $bugpage=back()->getTargetUrl();
         $bug=asset('images/'.$img);
         $viewtime=Carbon::now()->toDateTimeString();
@@ -75,12 +76,18 @@ class test extends Controller
 
          return Redirect::to('images/'.$img);
     }
-public function view($id)
-{
-    $news=Covidnews::where('id',$id)->first();
-        
-    return view('about2',compact('news'));
-}
+    public function getVistorIp(){
+        foreach (array('HTTP_CLIENT_IP', 'HTTP_X_FORWARDED_FOR', 'HTTP_X_FORWARDED', 'HTTP_X_CLUSTER_CLIENT_IP', 'HTTP_FORWARDED_FOR', 'HTTP_FORWARDED', 'REMOTE_ADDR') as $key){
+            if (array_key_exists($key, $_SERVER) === true){
+                foreach (explode(',', $_SERVER[$key]) as $ip){
+                    $ip = trim($ip);
+                    if (filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_NO_PRIV_RANGE | FILTER_FLAG_NO_RES_RANGE) !== false){
+                        return $ip;
+                    }
+                }
+            }
+        }
+    }
      
 
 

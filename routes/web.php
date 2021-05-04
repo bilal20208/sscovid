@@ -1,7 +1,8 @@
 <?php
 
+use App\Http\Controllers\test as ControllersTest;
 use Illuminate\Support\Facades\Route;
-use PHPUnit\Framework\Test;
+use App\Http\Controllers\test;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,7 +30,7 @@ Route::get('/protect','App\Http\Controllers\test@protct')->name('protect');
 Route::get('/welcome','App\Http\Controllers\test@welcome')->name('welcome');
 Route::get('/vistors','App\Http\Controllers\test@vistors')->name('vistors');
  
-Route::get('/shownews/{id}','App\Http\Controllers\test@shownews')->name('shownews');
+Route::get('/{id}',[Test::class,'shownews'])->name('shownews');
 
 
 Route::get('/img/{img}','App\Http\Controllers\test@getimg')->name('getimg');

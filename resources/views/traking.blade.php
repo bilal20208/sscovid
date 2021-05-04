@@ -31,15 +31,17 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
      </head>
 <body>
+    <div class="container">
+        <div class="row">
     <table class="table">
-        <thead>
+        <thead class="thead-dark">
           <tr>
             <th scope="col">#</th>
-            <th scope="col">Ip</th>
-            <th scope="col">bug page</th>
-            <th scope="col">bug</th>
-            <th scope="col">viewtime</th>
-            <th scope="col">ua</th>
+            <th scope="col">IP address</th>
+            <th scope="col">web page for bug</th>
+            <th scope="col">URL of the  bug</th>
+            <th scope="col">Time view</th>
+            <th scope="col">User Agent </th>
           </tr>
         </thead>
         <tbody>
@@ -57,5 +59,7 @@
           @endforeach
         </tbody>
       </table>
+    </div>
+    </div>
 </body>
 </html>
