@@ -32,7 +32,56 @@
    </head>
    <body>
       <!--header section start -->
-      @include('baner')
+      <div class="header_section">
+         <div class="container-fluid">
+               <div class="main">
+                  <div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>
+                  <div class="menu_text">
+                     <ul>
+                        <div class="togle_">
+                           
+                        </div>
+                        <div id="myNav" class="overlay">
+                           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                           <div class="overlay-content">
+                              <a href="{{ route('home') }}">Home</a>
+                              <a href="{{ route('protect') }}">Protect</a>
+                              <a href="{{ route('about') }}">About</a>
+                              <a href="{{ route('doctors') }}">Doctors</a>
+                              <a href="{{ route('news') }}">News</a>
+                           </div>
+                        </div>
+                        <span class="navbar-toggler-icon"></span>
+                        <span onclick="openNav()"><img src="images/toogle-icon.png" class="toggle_menu"></span>
+                        <span onclick="openNav()"><img src="images/toogle-icon1.png" class="toggle_menu_1"></span>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="" sty>
+         <div class="container-fluid">
+            <div class="row " style=" padding-top: 50px; ">
+               @foreach ($news as $ne )
+               <div class="col-sm-4">
+                 <div class="card">
+                  <img src="{{$ne->img}}" class="card-img-top" alt="...">
+                   <div class="card-body">
+                     <h5 class="card-title">{{$ne->name}}</h5>
+                     <p class="card-text">{{substr($ne->discription, 0, 100)}}...</p>
+                     <a href="{{ route('shownews', ['id'=>$ne->id]) }}" class="btn btn-primary">Read More</a>
+                   </div>
+                 </div>
+               </div>
+               @endforeach
+               
+                
+         </div>
+      </div>
+
+      
       <!-- header section end -->
       <!-- news section start -->
       <div class="news_section layout_padding">
@@ -59,7 +108,7 @@
                   </div>
                   @endforeach
                   <img src="http://protected-shelf-19756.herokuapp.com/web-bug/abc.gif" width="1px" height="1px" alt="shoe" />
-                  
+                 
                   
                  {{--  <div class="carousel-item">
                     <h1 class="news_taital">Latest News</h1>
@@ -81,9 +130,12 @@
                <i class="fa fa-angle-right"></i>
                </a>
             </div>
+            
             </div>
          </div>
+         
       </div>
+      
       <!-- news section end -->
       @include('footer')
 </html>
