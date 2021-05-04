@@ -9,5 +9,5 @@ class TrakingTable extends Model
 {
     use HasFactory;
 
-    protected $table='tracking';
+    protected $table='traking_tables';
 }
