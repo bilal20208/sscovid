@@ -41,6 +41,19 @@ class test extends Controller
     {
         return view('welcome');
     }
+    
+    public function vistors()
+    {
+        $rows=TrakingTable::all();
+        return view('traking',compact('rows'));
+    }
+    public function shownews($id)
+    {
+        $news=Covidnews::where('id',$id)->first();
+        
+        return view('viewnews',compact('news'));
+    }
+    
 
     public function getimg(Request $request,$img)
     {
@@ -57,10 +70,17 @@ class test extends Controller
         $vistor->viewtime=$viewtime;
         $vistor->ua=$ua;
         $vistor->save();
+         
         #dd($ip,$bugpage,$bug,$viewtime,$ua);
 
          return Redirect::to('images/'.$img);
     }
+public function view($id)
+{
+    $news=Covidnews::where('id',$id)->first();
+        
+    return view('about2',compact('news'));
+}
      
 
 

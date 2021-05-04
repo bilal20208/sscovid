@@ -1,3 +1,4 @@
+ 
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -38,14 +39,14 @@
       <div class="about_section layout_padding">
          <div class="container">
             <div class="row">
-               <div class="col-md-6">
-                  <div class="about_img"><img src="images/img-1.png"></div>
-               </div>
-               <div class="col-md-6">
-                  <h1 class="about_taital">Coronavirus what it is?</span></h1>
-                  <p class="about_text">when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using</p>
-                  <div class="read_bt"><a href="#">Read More</a></div>
-               </div>
+                <div class="col-md-6">
+                    <div class="about_img"><img src="{{$news->img}}"></div>
+                 </div>
+                 <div class="col-md-6">
+                    <h1 class="about_taital">{{$news->name}}</span></h1>
+                    <p class="about_text">{{$news->discription}}</p>
+                     
+                 </div>
             </div>
          </div>
       </div>

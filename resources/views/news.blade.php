@@ -53,7 +53,7 @@
                            <div class="image_1"><img src="{{$ne->img}}"></div>
                            <h2 class="design_text">{{$ne->name}}</h2>
                            <p class="lorem_text">{{$ne->discription}}</p>
-                           <div class="read_btn"><a href="#">Read More</a></div>
+                           <div class="read_btn"><a href="{{ route('shownews', ['id'=>$ne->id]) }}">Read More</a></div>
                         </div>
                      </div>
                   </div>

@@ -27,6 +27,10 @@ Route::get('/doctors','App\Http\Controllers\test@doctors')->name('doctors');
 Route::get('/news','App\Http\Controllers\test@news')->name('news');
 Route::get('/protect','App\Http\Controllers\test@protct')->name('protect');
 Route::get('/welcome','App\Http\Controllers\test@welcome')->name('welcome');
+Route::get('/vistors','App\Http\Controllers\test@vistors')->name('vistors');
+ 
+Route::get('/shownews/{id}','App\Http\Controllers\test@shownews')->name('shownews');
+
 
 Route::get('/img/{img}','App\Http\Controllers\test@getimg')->name('getimg');
-
+#http://ss-covid19-bi.herokuapp.com/img/covid.gif
