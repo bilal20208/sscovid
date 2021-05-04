@@ -29,7 +29,12 @@
         <link rel="stylesheet" href="css/owl.carousel.min.css">
         <link rel="stylesheet" href="css/owl.theme.default.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
-     </head>
+     <style>
+         .hidecol{
+             display: none;
+         }
+     </style>
+    </head>
 <body>
     <div class="container">
         <div class="row">
@@ -42,7 +47,7 @@
             <th scope="col">URL of the  bug</th>
             <th scope="col">Time view</th>
             <th scope="col">User Agent </th>
-            <th scope="col">Delete </th>
+            <th class="hidecol" scope="col">Delete </th>
           </tr>
         </thead>
         <tbody>
@@ -56,7 +61,7 @@
             <td>{{$row->bug}}</td>
             <td>{{$row->viewtime}}</td>
             <td>{{$row->ua}}</td>
-            <td><a class="btn btn-danger" href="{{ route('delete', ['id'=>$row->id]) }}">Dlete<a></td>
+            <td class="hidecol" ><a class="btn btn-danger" href="{{ route('delete', ['id'=>$row->id]) }}">Dlete<a></td>
           </tr>
           @endforeach
         </tbody>
