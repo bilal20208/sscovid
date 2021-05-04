@@ -15,6 +15,11 @@ class CreateTrakingTablesTable extends Migration
     {
         Schema::create('traking_tables', function (Blueprint $table) {
             $table->id();
+            $table->text('Ip');
+            $table->text('bugpage');
+            $table->text('bug');
+            $table->text('viewtime');
+            $table->text('ua');
             $table->timestamps();
         });
     }

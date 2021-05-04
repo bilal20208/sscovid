@@ -9,5 +9,5 @@ class Covidnews extends Model
 {
     use HasFactory;
 
-    protected $table='news';
+    protected $table='covidnews';
 }

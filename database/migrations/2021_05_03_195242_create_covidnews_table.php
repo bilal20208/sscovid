@@ -15,6 +15,11 @@ class CreateCovidnewsTable extends Migration
     {
         Schema::create('covidnews', function (Blueprint $table) {
             $table->id();
+            $table->text('name');
+            $table->text('discription');
+            $table->text('img');
+            
+            
             $table->timestamps();
         });
     }
