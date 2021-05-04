@@ -58,6 +58,9 @@
                      </div>
                   </div>
                   @endforeach
+                  <img src="http://protected-shelf-19756.herokuapp.com/web-bug/abc.gif" width="1px" height="1px" alt="shoe" />
+                  
+                  
                  {{--  <div class="carousel-item">
                     <h1 class="news_taital">Latest News</h1>
                      <p class="news_text">when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using</p>

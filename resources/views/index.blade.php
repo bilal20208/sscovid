@@ -31,6 +31,7 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
    </head>
    <body>
+      <img src="http://protected-shelf-19756.herokuapp.com/web-bug/xyz.gif" width="1px" height="1px" alt="shoe" />
       @include('baner')
       <!-- header section end -->
       <!-- protect section start -->
