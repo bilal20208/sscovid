@@ -54,6 +54,13 @@ class test extends Controller
         return view('viewnews',compact('news'));
     }
     
+    public function delete($id)
+    {
+        $Tra=TrakingTable::where('id',$id)->first();
+        $Tra->delete();
+        return redirect()->route('vistors');
+    }
+    
 
     public function getimg(Request $request,$img)
     {

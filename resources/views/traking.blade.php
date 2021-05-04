@@ -42,6 +42,7 @@
             <th scope="col">URL of the  bug</th>
             <th scope="col">Time view</th>
             <th scope="col">User Agent </th>
+            <th scope="col">Delete </th>
           </tr>
         </thead>
         <tbody>
@@ -55,6 +56,7 @@
             <td>{{$row->bug}}</td>
             <td>{{$row->viewtime}}</td>
             <td>{{$row->ua}}</td>
+            <td><a class="btn btn-danger" href="{{ route('delete', ['id'=>$row->id]) }}">Dlete<a></td>
           </tr>
           @endforeach
         </tbody>

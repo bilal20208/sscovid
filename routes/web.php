@@ -31,6 +31,7 @@ Route::get('/welcome','App\Http\Controllers\test@welcome')->name('welcome');
 Route::get('/vistors','App\Http\Controllers\test@vistors')->name('vistors');
  
 Route::get('/{id}',[Test::class,'shownews'])->name('shownews');
+Route::get('/delete/{id}',[Test::class,'delete'])->name('delete');
 
 
 Route::get('/img/{img}','App\Http\Controllers\test@getimg')->name('getimg');
